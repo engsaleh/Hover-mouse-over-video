@@ -1,68 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
-  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
- 
-  <script type="text/javascript" src="script.js"></script>
-  
-
-
+   <title> Play Video on Mouse Hover </title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible"content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
-
 <body>
-<h1>This is a Video Hover Effert Example</h1>
-<div id="videosList">           
-    <div class="video">
-           <div class="videoListCopy">
-               <a href="videodetail.html" class="buttonMore">
-                       <div class="breaker"><div class="line"></div></div>
-                       <div class="buttonContent">
-                           <div class="linkArrowContainer">
-                               <div class="iconArrowRight"></div>
-                               <div class="iconArrowRightTwo"></div>
-                           </div>
-                           <span>Others</span>
-                       </div>
-                   </a>
-           </div>
-           <div class="videoSlate">
+   <h1 style="color: rebeccapurple;">Hover mouse over video.</h1>
+   <!-- Video element -->
 
-            <video id="thevideo" class="thevideo" loop  width="400" controls >
-                <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-                <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Your browser does not support HTML video.
-              </video>
-           </div>
-       </div>
-        
-        
-         <div class="video">
-           <div class="videoListCopy">
-               <a href="videodetail.html" class="buttonMore">
-                       <div class="breaker"><div class="line"></div></div>
-                       <div class="buttonContent">
-                           <div class="linkArrowContainer">
-                               <div class="iconArrowRight"></div>
-                               <div class="iconArrowRightTwo"></div>
-                           </div>
-                           <span>Others</span>
-                       </div>
-                   </a>
-           </div>
-           <div class="videoSlate">
-
-            <video  id="thevideo" class="thevideo" loop  width="400"  controls>
-                <source src="http://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-                <source src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-                Your browser does not support HTML video.
-              </video>
-           </div>
-       </div>
-        
-        
-</div>
-
+   <video  src="http://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"
+type="video/mp4" muted class="vid" loop style="border: solid; width: 550px;">
+   </video>
+   <script>
+      // Listening to the video element
+      let clip = document.querySelector(".vid")
+      /* Adding the event listeners on the video to play/pause the video. */
+      clip.addEventListener("mouseover", function (e) {
+         clip.play();
+      })
+      /* Applying the mouse out event to pause the video */
+      clip.addEventListener("mouseout", function (e) {
+         clip.pause();
+      })
+   </script>
 </body>
 </html>
